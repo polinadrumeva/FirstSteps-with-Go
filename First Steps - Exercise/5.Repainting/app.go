@@ -6,14 +6,16 @@ func main() {
 	nailonPk := 1.50
 	paintPk := 14.50
 	foamL := 5.00
+	bags := 0.40
 
-	var pens, markers, foam, discount int
-	fmt.Scanln(&pens)
-	fmt.Scanln(&markers)
+	var nailon, paint, foam, hours float64
+	fmt.Scanln(&nailon)
+	fmt.Scanln(&paint)
 	fmt.Scanln(&foam)
-	fmt.Scanln(&discount)
-	sum := (penPkg * float64(pens)) + (markersPkg * float64(markers)) + (foamL * float64(foam))
-	sumWithDiscount := sum - (sum * (float64(discount) / 100))
+	fmt.Scanln(&hours)
+	sumMaterials := ((nailon + 2) * nailonPk) + ((paint + (paint * 0.10)) * (paintPk)) + (foam * foamL) + bags
+	workForHour := sumMaterials * 0.30
+	sum := sumMaterials + (workForHour * hours)
 
-	fmt.Println(sumWithDiscount)
+	fmt.Println(sum)
 }
