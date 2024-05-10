@@ -11,20 +11,20 @@ func main() {
 	if kind == "square" {
 		var a float64
 		fmt.Scanln(&a)
-		fmt.Println(a * a)
+		fmt.Printf("%.3f", (a * a))
 	} else if kind == "rectangle" {
 		var a, b float64
 		fmt.Scanln(&a)
 		fmt.Scanln(&b)
-		fmt.Println(a * b)
+		fmt.Printf("%.3f", (a * b))
 	} else if kind == "circle" {
 		var a float64
 		fmt.Scanln(&a)
-		fmt.Println((a * a) * math.Pi)
+		fmt.Printf("%.3f", ((a * a) * math.Pi))
 	} else if kind == "triangle" {
 		var a, b float64
 		fmt.Scanln(&a)
 		fmt.Scanln(&b)
-		fmt.Println((a * b) / 2)
+		fmt.Printf("%.3f", ((a * b) / 2))
 	}
 }
